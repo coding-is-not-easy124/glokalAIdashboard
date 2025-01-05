@@ -1,0 +1,26 @@
+.status-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .status-bar div {
+    height: 100%;
+    transition: width 0.3s;
+    border-radius: 5px;
+  }
+  
+  .status-bar div.green {
+    background-color: #28a745;
+  }
+  
+  .status-bar div.yellow {
+    background-color: #ffc107;
+  }
+  
+  .status-bar div.red {
+    background-color: #dc3545;
+  }
+  

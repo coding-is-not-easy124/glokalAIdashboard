@@ -1,0 +1,168 @@
+/* General page styling */
+.analytics-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Styling the content container */
+.content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #333; /* Teal color */
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 2px;
+    overflow: hidden; /* Clip the text for animation */
+}
+
+.page-header h1:hover {
+    color: #555; /* Change text color to white on hover */
+    text-shadow: 0 0 10px rgba(85, 85, 85, 0.7); /* Greyish shadow with #555 */
+}
+
+/* Paragraph styling */
+.page-header p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 300;
+    transition: color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.page-header p:hover {
+    color: #008080; /* Teal color on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Grid container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px; /* Increased spacing between cards */
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Card styling */
+.card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent any shadow overflow */
+}
+
+/* Card hover styles */
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale on hover */
+    box-shadow: 0 12px 24px rgba(0, 128, 128, 0.5); /* Tealish shadow */
+    background: linear-gradient(135deg, #e0eafc, #cfeffc); /* Slight gradient effect */
+    border: 1px solid #8fdede; /* Teal border on hover */
+    cursor: pointer;
+}
+
+/* Sliding tealish screen animation */
+.card:after {
+    content: '';
+    position: absolute;
+    bottom: -100%; /* Start off-screen */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 128, 128, 0.6); /* Semi-transparent teal color */
+    transition: transform 0.5s ease; /* Smooth slide-in animation */
+    z-index: 0; /* Ensure it appears behind content */
+    transform: translateY(100%);
+}
+
+.card:hover:after {
+    transform: translateY(0); /* Slide up to cover the card */
+}
+
+/* Card content styling */
+.card h2,
+.card p,
+.card svg {
+    position: relative; /* Keep above the sliding screen */
+    z-index: 1;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.card:hover h2 {
+    color: #006666; /* White text on hover */
+}
+
+.card:hover p {
+    color: #006666; /* Lighter teal text on hover */
+}
+
+.card:hover svg {
+    color: #006666; /* White icon on hover */
+}
+
+.card canvas {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}

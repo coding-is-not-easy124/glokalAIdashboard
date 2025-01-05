@@ -1,0 +1,144 @@
+/* General Container */
+.container {
+  font-family: 'Arial', sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  color: #555;
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #00509e;
+  margin-bottom: 25px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2{
+  font-size: 2.1rem; 
+}
+
+.section p{
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* Card Styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  background-color: #f9f9f9;
+  width: 70%;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.card ul {
+  margin: 10px auto 0 auto; /* Center the list */
+  padding: 0;
+  color: #444;
+  text-align: center; /* Center-align list items */
+  list-style-position: inside; /* Keep bullets inside the container */
+}
+
+.card ul li {
+  margin-bottom: 8px;
+  display: inline-block; /* Optional: makes list items inline */
+  text-align: center; /* Center-align content inside list items */
+}
+
+/* Samurai Card Styles */
+.samurai-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  background-color: #f9f9f9;
+  width: 70%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.samurai-card h3 {
+  font-size: 1.4rem;
+  color: #00509e;
+  margin-bottom: 10px;
+}
+
+.samurai-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.samurai-card ul {
+  margin: 10px auto 0 auto; /* Center the list */
+  padding: 0;
+  color: #444;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.samurai-card ul li {
+  margin-bottom: 8px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Link Styles */
+a {
+  color: #0073e6;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00509e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}
